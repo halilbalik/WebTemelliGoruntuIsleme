@@ -1,0 +1,309 @@
+:root {
+  --ana-renk: #2563eb;
+  --ikincil-renk: #475569;
+  --arka-plan-renk: #1e293b;
+  --kart-arka-plan: #2d3748;
+  --metin-ana: #f8fafc;
+  --metin-ikincil: #cbd5e1;
+  --kenar-yuvarlakligi: 12px;
+  --golge: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body {
+  transform: scale(0.8);
+  transform-origin: top center;
+  background-color: var(--arka-plan-renk);
+  color: var(--metin-ana);
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container-fluid {
+  height: 100vh;
+  padding: 1.5rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  height: 50px;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  color: var(--ana-renk);
+  margin: 0;
+}
+
+.card {
+  background: var(--kart-arka-plan);
+  border-radius: var(--kenar-yuvarlakligi);
+  box-shadow: var(--golge);
+  border: none;
+  height: calc(100vh - 90px);
+  margin: 0.5rem;
+  transition: transform 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: calc(100% - 60px);
+}
+
+.parameter-group {
+  margin-bottom: 0.5rem;
+}
+
+.form-label {
+  margin-bottom: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.camera-section {
+  background: var(--kart-arka-plan);
+  border: 1px solid #e2e8f0;
+  border-radius: var(--kenar-yuvarlakligi);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  transition: background-color 0.5s ease;
+}
+
+.camera-section:hover {
+  background-color: #3b4252;
+}
+
+.camera-section .form-label {
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+#kamerayi-baslat {
+  background-color: #1d4ed8;
+  transition: transform 0.5s ease;
+}
+
+#kamerayi-baslat:hover {
+  transform: scale(1.05);
+}
+
+#kamerayi-durdur {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+#kamerayi-durdur:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+#kamera {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #f1f5f9;
+  margin-top: 0.3rem;
+  border-radius: var(--kenar-yuvarlakligi);
+}
+
+#fotograf-cek {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  margin-top: 0.3rem !important;
+}
+
+#dosya-sec {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+#dosya-sec:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.control-panel {
+  background: var(--arka-plan-renk);
+  padding: 0.75rem;
+  border-radius: var(--kenar-yuvarlakligi);
+  margin-top: 0.5rem;
+  transition: transform 0.5s ease;
+}
+
+.control-panel:hover {
+  transform: translateY(-5px);
+}
+
+.range-slider {
+  margin: 0.5rem 0;
+}
+
+.range-slider-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.range-slider-value {
+  background: var(--ana-renk);
+  color: white;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.deger-ayarlama {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.deger-ayarlama:hover {
+  background-color: #3b4252;
+  transform: scale(1.05);
+}
+
+.image-preview {
+  height: 500px;
+  width: 100%;
+  border-radius: var(--kenar-yuvarlakligi);
+  overflow: hidden;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-preview img:hover {
+  transform: scale(1.05);
+}
+
+button[type="submit"] {
+  transition: background-color 1s ease, transform 1s ease;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto !important;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  z-index: 100;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.preview-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--metin-ikincil);
+}
+
+.parameters-info {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.contributors {
+  margin-top: 4rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.contributor-item {
+  display: inline-block;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.contributor-item::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--kart-arka-plan);
+  color: var(--metin-ana);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  white-space: pre-line;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  width: max-content;
+  max-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border: 1px solid var(--ana-renk);
+}
+
+.contributor-item::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  border: 6px solid transparent;
+  border-bottom-color: var(--kart-arka-plan);
+  border-top-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.contributor-item:hover::before,
+.contributor-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.contributor-item:hover {
+  transform: scale(1.1);
+}
+
+.contributor-item i {
+  color: var(--ana-renk);
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: start;
+}
+
+.info-icon {
+  color: var(--ana-renk);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
